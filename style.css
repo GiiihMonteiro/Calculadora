@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+}
+
+/* fundo da página */
+body{
+    background: #2d1e36;
+    background: linear-gradient(#01061d, #241c42); /* gradient faz um degrade de cores na página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculadora{
+    background-color: #525ea3;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+    width: 320px;
+    display: flex; /* ativa o flexbox na calculadora */
+    flex-direction: column; /* muda direção entre os itens */
+    gap: 20px; /* coloca espaçamento entre os itens */
+}
+
+/* definições da tela da calculadora */
+#tela{
+    width: 100%;
+    height: 60px;
+    font-size:  1.5em;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ececf5;
+    color: black;
+    text-align: right;
+    box-shadow: inset 0 2px 4px black; /* inset = aumenta a sombra interna */
+}
+
+/* definições do espaçamento (gap) e direção (column) dos botões */
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* configurações dos botões ativando flexbox e deixando um espaçamento entre os itens */
+.linha-botoes{
+    display: flex;
+    gap: 15px;
+}
+
+/* definições e design dos botões*/
+button{
+    flex-grow: 1; /* adapta os botões a preencher o espaço definido a partir do elemento pai (tambémpode usar somente flex: 1)*/
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #bfc0d1;
+    color: #1e202c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* definições dos botões */
+button:hover{
+    background-color: #bfc0d1;
+    transform: translateY(-5px); /* little animaçãozinha dando um efeito de elevação */
+}
+
+/* active (ativar): quando um item é clicado, acontece alguma coisa. Serve tanto para item quanto para botão. */
+button:active{
+    transform: scale(0.97); /* transfromar o botão em uma escala */
+}
+
+/*cor do fundo de da letra dos botões de operador */
+.operador{
+    background-color: rgb(3, 38, 71);
+    color: #fff;
+}
+
+/* mudar cor do fundo ao colocar o mouse em cima*/
+.operador:hover{
+    background-color: #3b2f6d;
+}
+
+/* cor do fundo e da letra do botão de igual (=) */
+.botao-igual{
+    background-color: #5b15ac;
+    color: #fff;
+}
+
+/* mudar cor do botão de igual ao colocar o mouse em cima */
+.botao-igual:hover{
+    background-color: #1b032e;
+}
+
+/* cor do fundo e da letra do botão limpar (C) */
+.botao-limpar{
+    background-color: rgb(26, 10, 95);
+    color: #fff;
+}
+
+/* mudar cor do botão de limpar (C) ao colocar o mouse em cima*/
+.botao-limpar:hover{
+    background-color: rgb(107, 90, 182);
+}
